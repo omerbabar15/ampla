@@ -155,7 +155,7 @@ p{margin:0}
 .g-arrow svg{width:20px;height:20px}
 .g-prev{left:14px}.g-next{right:14px}
 .g-count{position:absolute;right:14px;bottom:14px;background:rgba(42,40,38,.72);color:var(--bone);padding:5px 12px;border-radius:var(--pill);font-size:12px;display:none}
-.g-thumbs{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.g-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
 .g-thumbs button{appearance:none;border:0;padding:0;background:var(--linen);cursor:pointer;aspect-ratio:1;overflow:hidden;border-radius:var(--r-sm);outline:1.5px solid transparent;outline-offset:-1.5px;opacity:.65;transition:opacity .2s}
 .g-thumbs button[aria-current="true"]{outline-color:var(--charcoal);opacity:1}
 .g-thumbs button:hover{opacity:1}
@@ -272,17 +272,18 @@ p{margin:0}
 .measure b{font-family:var(--serif);font-weight:400;font-size:clamp(26px,3vw,36px);line-height:1.15}
 .measure span{font-size:13.5px;color:var(--stone)}
 .fit-foot{font-size:13px;color:var(--stone);margin-top:12px}
-@media (max-width:700px){.measures{grid-template-columns:repeat(2,minmax(0,1fr))}.fit-img img{aspect-ratio:4/3;object-position:50% 70%}}
+@media (max-width:700px){.measures{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 /* features band */
 .band{background:var(--charcoal);color:var(--bone);padding-block:clamp(56px,8vw,120px);border-radius:var(--r-lg) var(--r-lg) 0 0}
 .band .eyebrow{color:var(--heather)}
 .band .sec-head p{color:rgba(244,241,236,.72)}
-.feat-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,3vw,40px);align-items:stretch}
-@media (max-width:900px){.feat-grid{grid-template-columns:minmax(0,1fr)}}
+.feat-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
+
 .feat-img{margin:0;border-radius:var(--r-lg);overflow:hidden;background:var(--linen)}
-.feat-img img{width:100%;height:100%;object-fit:cover}
-.feat-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.feat-img img{width:100%;height:auto}
+.feat-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+@media (max-width:900px){.feat-list{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.feat-list{grid-template-columns:1fr}}
 .feat-list li{padding:22px;border-radius:var(--r);background:rgba(244,241,236,.05);border:1px solid rgba(244,241,236,.1);display:grid;gap:8px;align-content:start}
 .feat-list svg{width:28px;height:28px;color:var(--heather)}
@@ -514,7 +515,7 @@ dialog::backdrop{background:rgba(30,28,26,.5)}
       <div class="gallery">
         <div class="g-main">
           <div class="g-track" id="gTrack" tabindex="0" aria-label="Product photos, swipe or use arrow keys"></div>
-          <span class="g-count num" id="gCount">1 / 6</span>
+          <span class="g-count num" id="gCount">1 / 4</span>
           <button class="g-arrow g-prev" type="button" id="gPrev" aria-label="Previous photo"><svg><use href="#i-left"/></svg></button>
           <button class="g-arrow g-next" type="button" id="gNext" aria-label="Next photo"><svg><use href="#i-right"/></svg></button>
         </div>
@@ -579,9 +580,10 @@ dialog::backdrop{background:rgba(30,28,26,.5)}
                 <li>Soft, heavyweight heather-grey fleece</li>
                 <li>Half zip at the chest, easy for breastfeeding</li>
                 <li>Two-way zips down both sides to open the hem up</li>
-                <li>Oversized hood with toggle drawcords</li>
+                <li>Adjustable hood with toggle drawcords</li>
                 <li>Big front pocket and ribbed cuffs</li>
-                <li>One size, cut long and wide to fit most bodies</li>
+                <li>Mitten cuffs to keep your hands warm</li>
+                <li>One size, a roomy cut with dropped shoulders</li>
               </ul>
             </div>
           </details>
@@ -610,13 +612,13 @@ dialog::backdrop{background:rgba(30,28,26,.5)}
           <p>AMPLA works around whatever your day needs, at home, on the school run, in the car or out with friends.</p>
         </div>
         <div class="ways-tabs" role="tablist" aria-label="Ways to wear it">
-          <button class="way" type="button" role="tab" aria-selected="true" aria-controls="wayPanel" data-img="assets/campaign.webp" data-pos="20% 50%" data-cap="Half zip open"><span class="n" aria-hidden="true">i</span><b>Nurse with ease</b><span>The chest half zip opens for breastfeeding, so you stay warm and covered.</span></button>
-          <button class="way" type="button" role="tab" aria-selected="false" aria-controls="wayPanel" data-img="assets/product-side.webp" data-contain="1" data-cap="Side zips"><span class="n" aria-hidden="true">ii</span><b>Open the sides</b><span>Zips down both sides open the hem up for sitting cross-legged, driving or carrying a baby.</span></button>
-          <button class="way" type="button" role="tab" aria-selected="false" aria-controls="wayPanel" data-img="assets/model-her.webp" data-cap="Fully zipped"><span class="n" aria-hidden="true">iii</span><b>Zip up and wrap in</b><span>Close everything and it's a wearable blanket, with deep sleeves and a hood that covers you completely.</span></button>
+          <button class="way" type="button" role="tab" aria-selected="true" aria-controls="wayPanel" data-img="assets/campaign.webp" data-pos="28% 50%" data-cap="Half zip open"><span class="n" aria-hidden="true">i</span><b>Nurse with ease</b><span>The chest half zip opens for breastfeeding, so you stay warm and covered.</span></button>
+          <button class="way" type="button" role="tab" aria-selected="false" aria-controls="wayPanel" data-img="assets/product.webp" data-contain="1" data-cap="Side zips"><span class="n" aria-hidden="true">ii</span><b>Open the sides</b><span>Zips down both sides open the hem up for sitting cross-legged, driving or carrying a baby.</span></button>
+          <button class="way" type="button" role="tab" aria-selected="false" aria-controls="wayPanel" data-img="assets/model-her.webp" data-cap="Fully zipped"><span class="n" aria-hidden="true">iii</span><b>Zip up and wrap in</b><span>Close everything up for a cosy, warm hoodie, with mitten cuffs and an adjustable hood.</span></button>
         </div>
       </div>
       <figure class="ways-img" id="wayPanel" role="tabpanel" aria-live="polite">
-        <img id="wayImg" src="assets/campaign.webp" alt="Woman sitting on a rug in the hoodie with the half zip" style="object-position:20% 50%">
+        <img id="wayImg" src="assets/campaign.webp" alt="Woman sitting on a rug in the hoodie with the half zip" style="object-position:28% 50%">
         <figcaption id="wayCap">Half zip open</figcaption>
       </figure>
     </div>
@@ -627,13 +629,13 @@ dialog::backdrop{background:rgba(30,28,26,.5)}
       <div class="sec-head center">
         <p class="eyebrow">One size fits all</p>
         <h2 id="fitTitle">One size. Every body.</h2>
-        <p>No size charts and no guessing. AMPLA is cut long and wide on purpose, so it drapes well whether you're petite, curvy or tall.</p>
+        <p>No size charts and no guessing. AMPLA has a relaxed, oversized cut with dropped shoulders, so it sits well whether you're petite, curvy or tall.</p>
       </div>
       <figure class="fit-img"><img src="assets/onesize.webp" alt="Three people of different heights and body types wearing the same one-size hoodie" loading="lazy" width="1600" height="900"></figure>
       <div class="measures">
-        <div class="measure"><small>Length</small><b class="num">36"</b><span>Falls to mid-thigh</span></div>
+        <div class="measure"><small>Length</small><b class="num">30"</b><span>Covers the hips</span></div>
         <div class="measure"><small>Chest</small><b class="num">64"</b><span>Wide, relaxed body</span></div>
-        <div class="measure"><small>Side zips</small><b class="num">18"</b><span>Open from the hem</span></div>
+        <div class="measure"><small>Side zips</small><b class="num">12"</b><span>Open from the hem</span></div>
         <div class="measure"><small>Fits</small><b>Most bodies</b><span>From petite to plus size</span></div>
       </div>
       <p class="fit-foot">Garment measurements in inches, taken flat.</p>
@@ -647,7 +649,7 @@ dialog::backdrop{background:rgba(30,28,26,.5)}
         <h2 id="featTitle">Soft fleece. Roomy fit. Made for everyone.</h2>
       </div>
       <div class="feat-grid">
-        <figure class="feat-img"><img src="assets/product-front.webp" alt="The AMPLA hoodie in heather grey, front view with half zip and side zips" loading="lazy" width="1122" height="1402"></figure>
+        <figure class="feat-img"><img src="assets/features.webp" alt="Feature callouts: premium warm fleece, breastfeeding-friendly front zip, maxi kangaroo pocket, mitten cuffs, adjustable hood, one size fits all and adjustable side openings" loading="lazy" width="1600" height="900"></figure>
         <ul class="feat-list">
           <li><svg><use href="#i-cloud"/></svg><h3>Cloud-soft fleece</h3><p>Heavy and warm, brushed soft inside for long Pakistani winter evenings.</p></li>
           <li><svg><use href="#i-zip"/></svg><h3>Nursing half zip</h3><p>A long chest zip for breastfeeding, or just to let some air in.</p></li>
@@ -684,7 +686,7 @@ dialog::backdrop{background:rgba(30,28,26,.5)}
         <div><a class="btn btn-light" data-wa="question" href="#" target="_blank" rel="noopener"><svg><use href="#i-chat"/></svg>Ask on WhatsApp</a></div>
       </div>
       <div class="acc">
-        <details><summary>Will one size really fit me?</summary><div class="acc-body"><p>It's cut long and wide on purpose, so it drapes over most bodies, from petite to plus size. On shorter wearers it falls lower like a cosy dress; on taller wearers it sits at the thigh.</p></div></details>
+        <details><summary>Will one size really fit me?</summary><div class="acc-body"><p>Yes. It has a relaxed, oversized cut with dropped shoulders and side zips you can open for extra room, so it fits most bodies from petite to plus size. On taller wearers it sits at the hip; on shorter wearers it falls a little lower.</p></div></details>
         <details><summary>How does the breastfeeding zip work?</summary><div class="acc-body"><p>The half zip at the chest opens wide enough to feed comfortably, and the roomy body keeps you covered and warm while you do.</p></div></details>
         <details><summary>What are the side zips for?</summary><div class="acc-body"><p>They open the hem from the bottom up, so you can sit cross-legged, drive, move freely or wear it over a bump or a baby carrier.</p></div></details>
         <details><summary>Is it for men too?</summary><div class="acc-body"><p>Yes. AMPLA is unisex, and the same size fits men and women.</p></div></details>
@@ -793,11 +795,9 @@ dialog::backdrop{background:rgba(30,28,26,.5)}
   const CITIES = CITIES_FAST.concat(['Faisalabad','Multan','Peshawar','Gujranwala','Sialkot','Hyderabad','Quetta','Bahawalpur','Sargodha','Abbottabad','Sukkur','Gujrat','Other city']);
   const PHOTOS = [
     {src:'assets/model-her.webp',alt:'Woman wearing the AMPLA hoodie with leggings and trainers'},
-    {src:'assets/product-front.webp',alt:'The hoodie in heather grey, front view',contain:true},
-    {src:'assets/model-him.webp',alt:'Man wearing the AMPLA hoodie with wide jeans'},
-    {src:'assets/product-side.webp',alt:'Front and side views showing the half zip and side zips',contain:true},
-    {src:'assets/onesize.webp',alt:'Three people of different body types wearing the same one-size hoodie',contain:true},
-    {src:'assets/campaign.webp',alt:'Woman relaxing at home in the hoodie',pos:'22% 50%'}
+    {src:'assets/product.webp',alt:'The hoodie in heather grey, front and side, showing the half zip and side zips',contain:true},
+    {src:'assets/model-him.webp',alt:'Man wearing the AMPLA hoodie with black jeans'},
+    {src:'assets/g-campaign.webp',alt:'Woman relaxing at home in the hoodie'}
   ];
 
   const $ = s => document.querySelector(s);
